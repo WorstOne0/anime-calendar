@@ -1,0 +1,33 @@
+@layer base {
+  /* 1rem = 10px, so sizes read straight off the design: text-[1.3rem] is 13px. */
+  :root {
+    font-size: 62.5%;
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    color: var(--title);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    border-color: var(--line);
+  }
+
+  :focus-visible {
+    outline: 0.2rem solid var(--action-text);
+    outline-offset: 0.2rem;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}

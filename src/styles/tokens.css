@@ -1,0 +1,64 @@
+/* Two layers: the palette holds values, the semantic layer holds roles. Markup reads roles only. */
+:root {
+  /* Palette: night, the neutrals of the dark page. */
+  --night-950: #0e0f13;
+  --night-925: #121419;
+  --night-900: #16181e;
+  --night-875: #1a1c22;
+  --night-850: #1f2229;
+  --night-800: #262a33;
+  --night-750: #2b2e36;
+  --night-700: #33373f;
+  --night-600: #5a5e69;
+  --night-500: #7c818e;
+  --night-400: #9da1ad;
+  --night-300: #b4b8c2;
+  --night-200: #c4c7cf;
+  --night-50: #edeef2;
+
+  /* Palette: indigo. 5 the fill, 6 its hover, 3 text on the page, 2 its hover, 1 text on a tint. */
+  --indigo-1: #c9d4fb;
+  --indigo-2: #b7c6fa;
+  --indigo-3: #8da4f7;
+  --indigo-5: #3e63dd;
+  --indigo-6: #5273e6;
+
+  /* Palette: violet, Kuuhaku's second colour (portifolio tokens.css). 600 fills, 400 text. */
+  --violet-600: #7c3aed;
+  --violet-400: #a78bfa;
+
+  /* Surfaces */
+  --background: var(--night-950);
+  --panel: var(--night-925);
+  --surface: var(--night-900);
+  --surface-2: var(--night-850);
+  --surface-3: var(--night-875);
+  --line: var(--night-800);
+  --line-faint: var(--night-850);
+  --line-strong: var(--night-700);
+  --edge: var(--night-750);
+  --track: var(--night-800);
+
+  /* Text */
+  --title: var(--night-50);
+  --body: var(--night-200);
+  --copy: var(--night-300);
+  --meta: var(--night-400);
+  --soft: var(--night-500);
+  --muted: var(--night-600);
+
+  /* Indigo is everything clickable or selected. */
+  --action: var(--indigo-5);
+  --action-hover: var(--indigo-6);
+  --on-action: #ffffff;
+  --action-text: var(--indigo-3);
+  --action-text-hover: var(--indigo-2);
+  --action-pale: var(--indigo-1);
+
+  /* Violet marks the brand and time-to-air, never a control. */
+  --accent: var(--violet-600);
+  --lavender: var(--violet-400);
+
+  --card-radius: 1rem;
+  --control-radius: 0.6rem;
+}

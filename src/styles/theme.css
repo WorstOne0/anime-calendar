@@ -1,0 +1,40 @@
+/* Tailwind's own palette is switched off: the only colours that exist are the roles below,
+   plus white and black for overlays on covers. `text-gray-500` does not compile. */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+@theme inline {
+  --font-sans: var(--font-schibsted), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-line-faint: var(--line-faint);
+  --color-line-strong: var(--line-strong);
+  --color-edge: var(--edge);
+  --color-track: var(--track);
+  --color-title: var(--title);
+  --color-body: var(--body);
+  --color-copy: var(--copy);
+  --color-meta: var(--meta);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-action: var(--action);
+  --color-action-hover: var(--action-hover);
+  --color-on-action: var(--on-action);
+  --color-action-text: var(--action-text);
+  --color-action-text-hover: var(--action-text-hover);
+  --color-action-pale: var(--action-pale);
+  --color-accent: var(--accent);
+  --color-lavender: var(--lavender);
+
+  --radius-card: var(--card-radius);
+  --radius-control: var(--control-radius);
+}

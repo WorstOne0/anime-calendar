@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: anime_calendar
+    restart: unless-stopped
+    expose:
+      - 5003
+    networks:
+      - nginx-proxy
+
+# Nginx Proxy Manager forwards anime.kuuhaku.dev to anime_calendar:5003 on this network.
+networks:
+  nginx-proxy:
+    external: true
