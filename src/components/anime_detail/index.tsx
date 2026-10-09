@@ -2,6 +2,7 @@
 "use client";
 
 // Next
+import { useState } from "react";
 import Link from "next/link";
 // Controllers
 import { useLanguageController } from "@/core/controllers";
@@ -42,6 +43,8 @@ export default function AnimeDetail({
   bannerActions?: React.ReactNode;
 }) {
   const lang = useLanguageController((state) => state.lang);
+
+  const [isTrailerPlaying, setIsTrailerPlaying] = useState(false);
 
   const t = TRANSLATIONS[lang];
   const info = describeMedia(media, { t, lang, now, entry });
@@ -170,14 +173,28 @@ export default function AnimeDetail({
           <span className="hidden font-mono text-[1.1rem] text-soft lg:block">{t.filters.streamNote}</span>
         </div>
 
+        {/* A thumbnail until pressed: YouTube's player is heavy, so it loads only for whoever plays it. */}
         {trailer && (
-          <a href={`https://www.youtube.com/watch?v=${trailer.id}`} target="_blank" rel="noopener" className="relative block aspect-video rounded-card overflow-hidden bg-surface">
-            <img src={trailer.thumbnail ?? `https://i.ytimg.com/vi/${trailer.id}/hqdefault.jpg`} alt={`${t.detail.trailer}: ${info.title}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-black/35" />
-            <span className="px-[1.4rem] py-[0.8rem] absolute left-[1.2rem] bottom-[1.2rem] rounded-full bg-black/85 text-[1.3rem] font-semibold lg:left-[1.6rem] lg:bottom-[1.4rem]">
-              ▶ {t.detail.trailer}
-            </span>
-          </a>
+          <div className="relative aspect-video rounded-card overflow-hidden bg-surface">
+            {isTrailerPlaying ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${trailer.id}?autoplay=1&rel=0`}
+                title={`${t.detail.trailer}: ${info.title}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            ) : (
+              <button type="button" aria-label={`${t.detail.playTrailer}: ${info.title}`} onClick={() => setIsTrailerPlaying(true)} className="group absolute inset-0">
+                <img src={trailer.thumbnail ?? `https://i.ytimg.com/vi/${trailer.id}/hqdefault.jpg`} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                <span className="absolute inset-0 bg-black/35 transition-colors group-hover:bg-black/15" />
+                <span className="px-[1.4rem] py-[0.8rem] absolute left-[1.2rem] bottom-[1.2rem] rounded-full bg-black/85 text-[1.3rem] font-semibold transition-colors group-hover:bg-action lg:left-[1.6rem] lg:bottom-[1.4rem]">
+                  ▶ {t.detail.trailer}
+                </span>
+              </button>
+            )}
+          </div>
         )}
 
         <div className="flex flex-col">
