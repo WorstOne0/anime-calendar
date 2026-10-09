@@ -93,10 +93,10 @@ export default function SeasonView({ season, initialMedia }: { season: SeasonRef
   const buildCalendarSkeleton = () => (
     <div className="hidden px-[3.6rem] py-[2.4rem] lg:grid grid-cols-7">
       {[0, 1, 2, 3, 4, 5, 6].map((index) => (
-        <div key={index} className="px-[1rem] py-[1.4rem] flex flex-col gap-[1.4rem] border-l border-line-faint">
+        <div key={index} className="px-[0.6rem] py-[1.4rem] flex flex-col gap-[0.8rem] border-l border-line-faint">
           <div className="h-[1.4rem] w-1/2 rounded-[0.3rem] bg-surface-2" />
           {[0, 1, 2].map((row) => (
-            <div key={row} className="h-[6.4rem] rounded-control bg-surface animate-pulse" />
+            <div key={row} className="h-[9.7rem] rounded-control bg-surface animate-pulse" />
           ))}
         </div>
       ))}
