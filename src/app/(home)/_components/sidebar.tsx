@@ -25,7 +25,7 @@ export default function Sidebar({ season, media, myCount, activeCount, now }: { 
   return (
     <aside className="hidden h-full min-h-0 pt-[2.8rem] px-[2.4rem] pb-[2.4rem] lg:flex flex-col gap-[2.6rem] border-r border-line overflow-y-auto scrollbar-thin">
       <Link href="/" className="flex items-baseline gap-[0.4rem]">
-        <span className="text-[1.9rem] font-extrabold tracking-[-0.02em]">kuuhaku</span>
+        <span className="text-[1.9rem] font-extrabold tracking-[-0.02em]">disboard</span>
         <span className="font-mono text-[1.3rem] text-lavender">/anime</span>
       </Link>
 

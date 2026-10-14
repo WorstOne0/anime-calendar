@@ -1,12 +1,12 @@
 <div align="center">
 
-# kuuhaku/anime
+# disboard/anime
 
 ### Anime season calendar: every anime of the season, its air times in your timezone, and where to watch it
 
-**[anime.kuuhaku.dev](https://anime.kuuhaku.dev)** · Calendário de animes da temporada · [Português ↓](#-em-português)
+**[anime.disboard.dev](https://anime.disboard.dev)** · Calendário de animes da temporada · [Português ↓](#-em-português)
 
-[![Live](https://img.shields.io/badge/live-anime.kuuhaku.dev-7c3aed?style=flat-square)](https://anime.kuuhaku.dev)
+[![Live](https://img.shields.io/badge/live-anime.disboard.dev-7c3aed?style=flat-square)](https://anime.disboard.dev)
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
@@ -18,7 +18,7 @@
 
 ## What it does
 
-**kuuhaku/anime** is a fast, bilingual (Portuguese and English) seasonal anime tracker. Open it and you see the
+**disboard/anime** is a fast, bilingual (Portuguese and English) seasonal anime tracker. Open it and you see the
 whole current season (Winter, Spring, Summer or Fall), what airs today, and how long until each next episode, in
 **your own timezone**.
 
@@ -34,7 +34,7 @@ whole current season (Winter, Spring, Summer or Fall), what airs today, and how 
 - **A page for every anime**: synopsis, trailer, the full episode list with air dates, where to watch, and related
   seasons, at a shareable URL.
 - **Season archive**: past and upcoming seasons at their own URLs, like
-  [`/temporada/outono-2026`](https://anime.kuuhaku.dev/temporada/outono-2026).
+  [`/temporada/outono-2026`](https://anime.disboard.dev/temporada/outono-2026).
 - **Phone first-class**: a dedicated mobile layout with a filter sheet and day tabs, not a squeezed desktop.
 
 <table>
@@ -55,7 +55,7 @@ episódio e **onde assistir no Brasil** (Crunchyroll, Netflix, Disney+, Prime Vi
 estúdio e streaming, acompanhe sua lista da AniList e marque episódios como vistos. Cada anime tem a própria página,
 com sinopse, trailer e a lista de episódios com datas e horários.
 
-Acesse: **[anime.kuuhaku.dev](https://anime.kuuhaku.dev)**
+Acesse: **[anime.disboard.dev](https://anime.disboard.dev)**
 
 ## How it works
 
@@ -102,7 +102,7 @@ docker compose up -d
 ```
 
 The image ships Next's standalone server on port 5003 as the `anime_calendar` container, on the external
-`nginx-proxy` network that Nginx Proxy Manager forwards `anime.kuuhaku.dev` to. The `.env` next to the compose file
+`nginx-proxy` network that Nginx Proxy Manager forwards `anime.disboard.dev` to. The `.env` next to the compose file
 is copied into the build, so a new client id needs `docker compose build` again.
 
 ## Project layout
@@ -131,4 +131,4 @@ src/
 Anime data, covers and banners come from [AniList](https://anilist.co). This project is not affiliated with AniList
 or with any streaming service. Streaming links are AniList's and coverage is partial.
 
-Made by [Lucca Gabriel](https://portfolio.kuuhaku.dev).
+Made by [Lucca Gabriel](https://luccagabriel.dev).

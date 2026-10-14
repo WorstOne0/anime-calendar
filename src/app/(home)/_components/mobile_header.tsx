@@ -34,7 +34,7 @@ export default function MobileHeader({ season, days, activeCount }: { season: Se
     <div className="px-[2rem] py-[1.2rem] flex flex-col gap-[1.2rem] sticky top-0 z-10 bg-background border-b border-line lg:hidden">
       <div className="flex items-center justify-between">
         <Link href="/" className="flex items-baseline gap-[0.3rem]">
-          <span className="text-[1.5rem] font-extrabold tracking-[-0.02em]">kuuhaku</span>
+          <span className="text-[1.5rem] font-extrabold tracking-[-0.02em]">disboard</span>
           <span className="font-mono text-[1.1rem] text-lavender">/anime</span>
         </Link>
         <div className="flex items-center gap-[1.2rem]">

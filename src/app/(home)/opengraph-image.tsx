@@ -5,7 +5,7 @@ import path from "node:path";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "kuuhaku/anime · Calendário de animes da temporada";
+export const alt = "disboard/anime · Calendário de animes da temporada";
 
 // x, y, diameter in px
 const STARS = [
@@ -48,7 +48,7 @@ export default async function OpengraphImage() {
         ))}
 
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 700 }}>
-          <span style={{ fontSize: 30, color: "#a78bfa" }}>anime.kuuhaku.dev</span>
+          <span style={{ fontSize: 30, color: "#a78bfa" }}>anime.disboard.dev</span>
           <span style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.05, marginTop: 18 }}>Calendário de animes da temporada</span>
           <span style={{ fontSize: 34, fontWeight: 600, marginTop: 32, color: "#8da4f7" }}>Horários no seu fuso · Onde assistir no Brasil</span>
         </div>

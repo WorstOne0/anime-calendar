@@ -24,7 +24,7 @@ export default function ShowView({ media }: { media: MediaDetail }) {
     <div className="h-full overflow-y-auto scrollbar-thin">
       <header className="px-[2rem] py-[1.4rem] flex items-center justify-between gap-[1.2rem] sticky top-0 z-10 bg-background border-b border-line lg:px-[3.6rem]">
         <Link href="/" className="flex items-baseline gap-[0.4rem]">
-          <span className="text-[1.7rem] font-extrabold tracking-[-0.02em]">kuuhaku</span>
+          <span className="text-[1.7rem] font-extrabold tracking-[-0.02em]">disboard</span>
           <span className="font-mono text-[1.2rem] text-lavender">/anime</span>
         </Link>
         <div className="flex items-center gap-[1.6rem]">

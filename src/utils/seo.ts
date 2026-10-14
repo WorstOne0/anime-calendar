@@ -6,8 +6,8 @@ import { TRANSLATIONS, animePath, mediaTitles, seasonPath, type Media, type Medi
 import { describeMedia } from "./describe_media";
 import { formatClock, formatDay, formatMonth, formatWeekday, pad2 } from "./format";
 
-export const SITE_URL = "https://anime.kuuhaku.dev";
-export const SITE_NAME = "kuuhaku/anime";
+export const SITE_URL = "https://anime.disboard.dev";
+export const SITE_NAME = "disboard/anime";
 
 // The server always renders Portuguese, so that is what search engines index.
 const t = TRANSLATIONS.pt;
